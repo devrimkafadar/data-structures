@@ -189,26 +189,6 @@ class NodeTree{
             this->preOrderTraversal();
             this->postOrderTraversal();
         }
-        /*void remove(int value){
-            Node * iter = this->root;
-            while (iter->value != value){
-                if(value < iter->value) iter = iter->left;
-                else iter = iter->right;
-
-                if(iter == NULL) return;
-                if(iter->left != NULL){
-                    int leftMax = getMax(iter->left);
-                    iter->value = leftMax;
-                    remove(leftMax);
-                }else if(iter->right != NULL){
-                    int rightMin = getMin(iter->right);
-                    iter->value = rightMin;
-                    remove(rightMin);
-                }else{
-                    delete iter;
-                }
-            }
-        }*/
         void remove(int value){mainRemove(this->root ,value);}
         void clear(){mainClear(this->root);}
 };
